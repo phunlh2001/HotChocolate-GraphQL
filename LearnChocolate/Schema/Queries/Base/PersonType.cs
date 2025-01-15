@@ -1,4 +1,4 @@
-﻿namespace LearnChocolate.Schema.Base;
+﻿namespace LearnChocolate.Schema.Queries.Base;
 
 public class PersonType
 {

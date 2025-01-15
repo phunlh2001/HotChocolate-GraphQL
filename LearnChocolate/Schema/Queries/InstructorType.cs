@@ -1,6 +1,6 @@
-﻿using LearnChocolate.Schema.Base;
+﻿using LearnChocolate.Schema.Queries.Base;
 
-namespace LearnChocolate.Schema;
+namespace LearnChocolate.Schema.Queries;
 
 public class InstructorType : PersonType
 {

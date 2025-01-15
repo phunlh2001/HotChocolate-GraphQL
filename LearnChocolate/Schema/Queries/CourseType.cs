@@ -1,4 +1,4 @@
-﻿namespace LearnChocolate.Schema;
+﻿namespace LearnChocolate.Schema.Queries;
 
 public class CourseType
 {

@@ -1,6 +1,6 @@
 ﻿using Bogus;
 
-namespace LearnChocolate.Schema;
+namespace LearnChocolate.Schema.Queries;
 
 public class Query
 {
@@ -35,10 +35,8 @@ public class Query
         return _courseFaker.Generate(5);
     }
 
-    public async Task<CourseType> GetCourseByIdASync(Guid id)
+    public CourseType GetCourseById(Guid id)
     {
-        await Task.Delay(1000);
-
         var course = _courseFaker.Generate();
         course.Id = id;
 

@@ -29,11 +29,7 @@ public class Mutation
 
     public async Task<CourseResult> UpdateCourse(Guid id, CourseInputType input, [Service] ITopicEventSender sender)
     {
-        var course = _courses.FirstOrDefault(c => c.Id == id);
-        if (course == null)
-        {
-            throw new GraphQLException(new Error("Course not found", "COURSE_NOT_FOUND"));
-        }
+        var course = _courses.FirstOrDefault(c => c.Id == id) ?? throw new GraphQLException(new Error("Course not found", "COURSE_NOT_FOUND"));
 
         course.Name = input.Name;
         course.Subject = input.Subject;
